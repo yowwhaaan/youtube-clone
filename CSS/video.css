@@ -1,0 +1,145 @@
+.thumbnail {
+    width: 100%;
+    cursor: pointer;
+  }
+  .thumbnail-row{
+    position: relative;
+  }
+  .time{
+    position: absolute;
+    right: 5px;
+    bottom:10px;
+    color: white;
+    background-color: rgba(0,0,0,0.9);
+    font-size: 12px;
+    font-weight: 500px;
+    padding: 4px 4px;
+    border-radius: 2px;
+  }
+  
+  .author {
+    vertical-align: top;
+    position: relative;
+  }
+  .video-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  .video-author {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #606060;
+    margin-bottom: 2px;
+  }
+  .author-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+  .video-stats {
+    font-size: 12px;
+    color: #606060;
+  }
+  .video-wrapper {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    margin-top: 10px;
+  }
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+  }
+  .video-desc a,
+  .video-desc a:visited,
+  .video-desc a:active{
+    text-decoration: none;
+  }
+  .video-desc .main-video,
+  .video-desc .main-video:active,
+  .video-desc .main-video:visited{
+    color:black;
+  }
+  .video-desc .author-link,
+  .video-desc .author-link:visited,
+  .video-desc .author-link:active{
+    color: #606060;
+  }
+  
+  .author-subscriber{
+    position: absolute;
+    display: flex;
+    width: 220px;
+    box-shadow: 0 0 7px rgba(0,0,0,0.5);
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    bottom: -35px;
+    z-index: 200;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+   
+  }
+  
+  .author-subscriber img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-position: center;
+    object-fit: cover;
+  }
+  
+  .author-subscriber p{
+    font-family: roboto;
+    margin-left: 8px;
+    padding-right: 15px;
+  }
+  .author-subscriber .a-name{
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .author-subscriber .a-subscriber{
+    font-size: 14px;
+    color: #606060;
+  }
+
+  .author:hover .author-subscriber{
+    opacity: 1;
+  }
+  @media (max-width: 599px){
+    .video-grid{
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 869px){
+    .video-grid{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 870px) and (max-width:1124){
+    .video-grid{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @media (min-width:1125px){
+    .video-grid{
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .video-title{
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .video-stats,
+    .video-author{
+      font-size: 14px;
+    }
+  }
